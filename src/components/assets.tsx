@@ -11,10 +11,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 function Assets() {
   return (
-    <div className="min-h-screen bg-[#061220]">
+    <div className="min-h-screen bg-white dark:bg-[#061220]">
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-white mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
           Nagios Documentation
         </h1>
 

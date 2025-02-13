@@ -59,25 +59,27 @@ function Exchange() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#061220]">
+    <div className="min-h-screen bg-white dark:bg-[#061220]">
       <Header />
       <main>
         {/* Hero Section */}
-        <div className="bg-gradient-to-b from-yellow-500/10 to-[#061220] pt-12 pb-6">
+        <div className="bg-gradient-to-b from-yellow-100 to-white dark:from-yellow-500/10 dark:to-[#061220] pt-12 pb-6">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center space-y-6 max-w-3xl mx-auto"
             >
-              <h1 className="text-4xl font-bold text-white">Nagios Exchange</h1>
-              <p className="text-lg text-gray-300">
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+                Nagios Exchange
+              </h1>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 Discover and share plugins, addons, and extensions for Nagios
               </p>
               <div className="flex gap-4 max-w-2xl mx-auto">
                 <Input
                   placeholder="Search plugins, addons, and extensions..."
-                  className="bg-[#1e3a5f] border-[#2e4a6f] text-white placeholder:text-gray-400"
+                  className="bg-white dark:bg-[#1e3a5f] border-gray-200 dark:border-[#2e4a6f] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                 />
                 <Button className="bg-yellow-600 hover:bg-yellow-700">
                   <Search className="h-4 w-4" />
@@ -140,7 +142,7 @@ function Exchange() {
                             <h3 className="text-xl font-semibold">
                               {plugin.title}
                             </h3>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-sm text-gray-500 dark:text-gray-400">
                               by {plugin.author}
                             </p>
                           </div>
@@ -151,15 +153,17 @@ function Exchange() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <p className="text-gray-300">{plugin.description}</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {plugin.description}
+                        </p>
                         <div className="flex justify-between items-center">
-                          <div className="flex items-center gap-2 text-gray-400">
+                          <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                             <Download className="h-4 w-4" />
                             <span className="text-sm">{plugin.downloads}</span>
                           </div>
                           <Button
                             variant="ghost"
-                            className="text-yellow-400 hover:text-yellow-300 hover:bg-yellow-600/10"
+                            className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 hover:bg-yellow-600/10"
                           >
                             View Details
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -173,14 +177,14 @@ function Exchange() {
             </TabsContent>
 
             <TabsContent value="addons" className="space-y-6">
-              <div className="text-center text-gray-400 py-12">
+              <div className="text-center text-gray-500 dark:text-gray-400 py-12">
                 <Tags className="w-12 h-12 mx-auto mb-4 opacity-50" />
                 <p>No add-ons available at the moment</p>
               </div>
             </TabsContent>
 
             <TabsContent value="config" className="space-y-6">
-              <div className="text-center text-gray-400 py-12">
+              <div className="text-center text-gray-500 dark:text-gray-400 py-12">
                 <Tags className="w-12 h-12 mx-auto mb-4 opacity-50" />
                 <p>No configuration templates available at the moment</p>
               </div>

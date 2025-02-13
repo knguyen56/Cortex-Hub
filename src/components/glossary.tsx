@@ -584,18 +584,18 @@ const glossaryTerms = [
 
 export default function Glossary() {
   return (
-    <div className="min-h-screen bg-[#061220]">
+    <div className="min-h-screen bg-white dark:bg-[#061220]">
       <Header />
       <main>
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-white mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
             Nagios Glossary
           </h1>
 
           <div className="flex gap-4 max-w-2xl mb-8">
             <Input
               placeholder="Search terms..."
-              className="bg-[#1e3a5f] border-[#2e4a6f] text-white placeholder:text-gray-400"
+              className="bg-gray-100 dark:bg-[#1e3a5f] border-gray-200 dark:border-[#2e4a6f] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
             />
             <Button className="bg-green-600 hover:bg-green-700">
               <Search className="h-4 w-4" />
@@ -606,13 +606,15 @@ export default function Glossary() {
             {glossaryTerms.map((item) => (
               <Card
                 key={item.term}
-                className="bg-[#0c2137] border-[#1e3a5f] text-white h-full"
+                className="bg-white dark:bg-[#0c2137] border-gray-200 dark:border-[#1e3a5f] text-gray-900 dark:text-white h-full shadow-sm"
               >
                 <CardHeader>
                   <CardTitle className="text-lg">{item.term}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 text-sm">{item.definition}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {item.definition}
+                  </p>
                 </CardContent>
               </Card>
             ))}

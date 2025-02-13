@@ -134,22 +134,24 @@ function Plugins() {
                               <Code className="w-5 h-5 text-orange-400" />
                               {plugin.title}
                             </CardTitle>
-                            <p className="text-sm text-gray-400 mt-1">
-                              {plugin.platform}
+                            <p className="text-sm text-gray-400">
+                              Platform: {plugin.platform}
                             </p>
                           </div>
+                          <div className="text-sm text-gray-400">
+                            Category: {plugin.category}
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300 mb-4">
+                          {plugin.description}
+                        </p>
+                        <div className="flex justify-between items-center">
                           <div className="flex items-center gap-2 text-gray-400">
                             <Download className="h-4 w-4" />
                             <span className="text-sm">{plugin.downloads}</span>
                           </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <p className="text-gray-300">{plugin.description}</p>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm px-2 py-1 rounded-full bg-orange-600/20 text-orange-400">
-                            {plugin.category}
-                          </span>
                           <Button
                             variant="ghost"
                             className="text-orange-400 hover:text-orange-300 hover:bg-orange-600/10"
@@ -165,21 +167,11 @@ function Plugins() {
               </div>
             </TabsContent>
 
-            <TabsContent value="community" className="space-y-6">
-              <Card className="bg-[#0c2137] border-[#1e3a5f] text-white p-8">
-                <div className="text-center space-y-4">
-                  <Terminal className="w-12 h-12 mx-auto text-orange-400 opacity-50" />
-                  <h3 className="text-xl font-semibold">Community Plugins</h3>
-                  <p className="text-gray-400 max-w-lg mx-auto">
-                    Discover and share community-created plugins through the
-                    Nagios Exchange platform.
-                  </p>
-                  <Button className="bg-orange-600 hover:bg-orange-700 mt-4">
-                    Visit Nagios Exchange
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </Card>
+            <TabsContent value="community" className="text-center py-12">
+              <div className="text-gray-400">
+                <Terminal className="w-12 h-12 mx-auto mb-4 opacity-50" />
+                <p>No community plugins available at the moment</p>
+              </div>
             </TabsContent>
           </Tabs>
         </div>

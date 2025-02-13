@@ -104,7 +104,7 @@ function Knowledgebase() {
                       }
                     >
                       {category.name}
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-gray-400">
                         {category.count}
                       </span>
                     </Button>
