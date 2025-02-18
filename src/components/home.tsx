@@ -20,25 +20,13 @@ function Home() {
       icon: <Shield className="w-6 h-6" />,
       title: "Core Monitoring",
       description:
-        "Enterprise-grade monitoring solution for servers, networks, and applications.",
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Network Analyzer",
-      description:
-        "Deep network traffic analysis and bandwidth monitoring capabilities.",
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Log Server",
-      description:
-        "Centralized log management and analysis for your entire infrastructure.",
+        "Open-Source monitoring solution for servers, networks, and applications. Click here to learn more about Nagios Core!",
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Plugin Library",
+      title: "Developer Toolkit",
       description:
-        "Extensive collection of monitoring plugins for various systems and services.",
+        "Advanced tools for automation, customization, and API integrations.",
     },
     {
       icon: <Book className="w-6 h-6" />,
@@ -47,10 +35,22 @@ function Home() {
         "Comprehensive guides and documentation for all Nagios products.",
     },
     {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Network Monitoring",
+      description:
+        "Comprehensive network analysis and bandwidth monitoring tools.",
+    },
+    {
       icon: <HeartHandshake className="w-6 h-6" />,
       title: "Community Support",
       description:
         "Active community forum and professional support options available.",
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Contact Us!",
+      description:
+        "Reach out to a team member with any questions you may have!",
     },
   ];
 
@@ -120,19 +120,9 @@ function Home() {
                 transition={{ delay: 0.4 }}
                 className="flex gap-4"
               >
-                <Link to="/assets">
+                <Link to="/installation">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/library">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-blue-600 text-blue-600 hover:bg-blue-600/10 dark:border-[#1e3a5f] dark:text-white dark:hover:bg-[#2e4a6f]"
-                  >
-                    View Documentation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
