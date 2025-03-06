@@ -10,6 +10,7 @@ import Plugins from "./components/plugins";
 import Knowledgebase from "./components/knowledgebase";
 import Glossary from "./components/glossary";
 import InstallationGuide from "./components/installation-guide";
+import Archives from "./components/archives";
 import routes from "tempo-routes";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/knowledgebase" element={<Knowledgebase />} />
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/installation" element={<InstallationGuide />} />
+            <Route path="/archives" element={<Archives />} />
           </Routes>
         </div>
       </Suspense>
